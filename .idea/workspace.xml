@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="015d3234-8e0d-4b92-8b4f-e27b5322a2da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/RAP-17494-add-colum-merchants-portal-reports" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BiNc2pxH6pQvadx1HT67XIk0ID" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/homepage" />
+      <recent name="$PROJECT_DIR$/src/utilitis" />
+      <recent name="$PROJECT_DIR$/src/assets/homepage/login" />
+      <recent name="$PROJECT_DIR$/src/styles/homepage" />
+      <recent name="$PROJECT_DIR$/src/components/homepage" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="dist/app/App.js" working-dir="$PROJECT_DIR$">
+      <method v="2">
+        <option name="TypeScript.Before.Run" enabled="true" FAIL_ON_ERROR="true" CONFIG_PATH="$PROJECT_DIR$/tsconfig.json" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="015d3234-8e0d-4b92-8b4f-e27b5322a2da" name="Changes" comment="" />
+      <created>1657385029386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657385029386</updated>
+      <workItem from="1657385032913" duration="1166000" />
+      <workItem from="1657386743595" duration="74000" />
+      <workItem from="1657386823666" duration="525000" />
+      <workItem from="1657435190540" duration="611000" />
+      <workItem from="1657569068784" duration="3531000" />
+      <workItem from="1657731747365" duration="774000" />
+      <workItem from="1657782304044" duration="408000" />
+      <workItem from="1657890717984" duration="16613000" />
+      <workItem from="1658041024071" duration="1202000" />
+      <workItem from="1658086045507" duration="4836000" />
+      <workItem from="1658091543510" duration="564000" />
+      <workItem from="1658125472981" duration="2116000" />
+      <workItem from="1658164257643" duration="9252000" />
+      <workItem from="1658225957174" duration="446000" />
+      <workItem from="1658253844943" duration="7583000" />
+      <workItem from="1658299968830" duration="815000" />
+      <workItem from="1658302340581" duration="381000" />
+      <workItem from="1658321147123" duration="3138000" />
+      <workItem from="1658327774689" duration="2739000" />
+      <workItem from="1658395748037" duration="269000" />
+      <workItem from="1658396882351" duration="1624000" />
+      <workItem from="1658410130855" duration="295000" />
+      <workItem from="1658410535727" duration="2313000" />
+      <workItem from="1658499917331" duration="19263000" />
+      <workItem from="1658689771175" duration="1559000" />
+      <workItem from="1658780537082" duration="4573000" />
+      <workItem from="1658818566257" duration="2402000" />
+      <workItem from="1658907213737" duration="493000" />
+      <workItem from="1659043699939" duration="3322000" />
+      <workItem from="1659097320714" duration="6824000" />
+      <workItem from="1659251876762" duration="450000" />
+      <workItem from="1659347971921" duration="1455000" />
+      <workItem from="1659705521120" duration="1813000" />
+      <workItem from="1660640060550" duration="790000" />
+      <workItem from="1660918256295" duration="7550000" />
+      <workItem from="1661064791841" duration="303000" />
+      <workItem from="1661066388289" duration="1033000" />
+      <workItem from="1661150757858" duration="619000" />
+      <workItem from="1661176116741" duration="2904000" />
+      <workItem from="1661241042957" duration="1902000" />
+      <workItem from="1661430605344" duration="11911000" />
+      <workItem from="1661782812790" duration="1313000" />
+      <workItem from="1661843202745" duration="777000" />
+      <workItem from="1661948663659" duration="3102000" />
+      <workItem from="1661959119642" duration="2340000" />
+      <workItem from="1662027618981" duration="959000" />
+      <workItem from="1662113890704" duration="1100000" />
+      <workItem from="1662232609841" duration="1063000" />
+      <workItem from="1662275671438" duration="28000" />
+      <workItem from="1662280786028" duration="1337000" />
+      <workItem from="1662452074283" duration="1698000" />
+      <workItem from="1666254906551" duration="1165000" />
+      <workItem from="1666357124910" duration="859000" />
+      <workItem from="1666508697169" duration="743000" />
+      <workItem from="1667052175194" duration="3463000" />
+      <workItem from="1667117036614" duration="84000" />
+      <workItem from="1667134957095" duration="616000" />
+      <workItem from="1667137016494" duration="1328000" />
+      <workItem from="1667207211571" duration="3892000" />
+      <workItem from="1667502929705" duration="5079000" />
+      <workItem from="1667564829568" duration="11760000" />
+      <workItem from="1667732920581" duration="3031000" />
+      <workItem from="1667736621888" duration="1967000" />
+      <workItem from="1667806545344" duration="3481000" />
+      <workItem from="1667894114821" duration="594000" />
+      <workItem from="1668188773031" duration="16865000" />
+      <workItem from="1668322059470" duration="29000" />
+      <workItem from="1668337651138" duration="255000" />
+      <workItem from="1668683806805" duration="720000" />
+      <workItem from="1668949798452" duration="4511000" />
+      <workItem from="1669040540746" duration="3456000" />
+      <workItem from="1669107575364" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
