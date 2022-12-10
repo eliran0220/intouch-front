@@ -1,5 +1,5 @@
 import  '../../css/homepage.css';
-import { FaUser,FaLock } from "react-icons/fa";
+//import { FaUser,FaLock } from "react-icons/fa";
 import React,{ useState } from 'react';
 import {apiLoginRequest} from '../../controllers/homepage';
 const Login = () => {

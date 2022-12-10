@@ -18,9 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "outDir": "dist"
+    "outDir": "dist"  
   },
   "include": [
     "src"
-  ]
+  ],
+  "typeRoots": ["node_modules"]
 }

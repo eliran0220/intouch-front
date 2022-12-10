@@ -1,4 +1,5 @@
 import  '../../css/homepage.css';
+import {handleExitSignup} from '../../utilitis//components/homepage';
 import React, { useState } from "react";;
 const Signup = () => {
     const [email, setEmail] = useState("");
@@ -6,6 +7,10 @@ const Signup = () => {
 
     const handleSignup = async (event : any) =>{
         event.preventDefault();
+    }
+    const handleExit = (event : any) => {
+        event.preventDefault();
+        handleExitSignup();
     }
     return (
         <div className = "popup-container">
@@ -27,7 +32,11 @@ const Signup = () => {
                         <span>Password</span>
                         <input type="password" onChange={e => setPassword(e.target.value)}></input>
                     </div>
+                    <div>
                     <button className="form-button" onClick={handleSignup}>Signup</button>
+                    <button className="form-button" onClick={handleExit}>Exist</button>
+                    </div>
+
                 </form>
         </div>
 

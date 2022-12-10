@@ -1,6 +1,6 @@
 import { HttpApiRequest, Body} from '../models/http-requests.models';
 import apiRequest from '../utilitis/http-request.utilities';
-import {HTTP_METHODS,METHOD} from '../utilitis/constants.utilities';
+import {HTTP_METHODS} from '../utilitis/constants.utilities';
 export const apiLoginRequest = async (email : string, password: string) =>{
     try {
         const body : Body = {email: email, password: password}

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {HttpApiRequest,Body} from '../models/http-requests.models';
+import {HttpApiRequest} from '../models/http-requests.models';
 import {HTTP_METHODS} from '../utilitis/constants.utilities';
 
 const apiRequest = async (request : HttpApiRequest) =>{

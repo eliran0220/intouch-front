@@ -1,5 +1,4 @@
 import bgVideo from '../../assets/homepage/background_vid.mp4';
-import bg_video from '../../assets/homepage/bg_video.mp4';
 
 import '../../css/homepage.css';
 const BgVideo = () => {

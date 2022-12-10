@@ -1,18 +1,11 @@
 import  '../../css/homepage.css';
+import {handlePopupSignup} from '../../utilitis/components/homepage';
 import React from "react";;
 const CreateAccount = () => {
     const popupSignup = () => {
-        const popup_container = document.getElementsByClassName("popup-container")[0];
-        const left_container = document.getElementsByClassName("left-container")[0];
-        const right_container = document.getElementsByClassName("right-container")[0];
-        const bg_vid = document.getElementsByClassName("video-container")[0];
-        popup_container.className = "active-popup-container";
-        left_container.classList.add("blured");
-        right_container.classList.add("blured")
-        bg_vid.classList.add("blured")
-
-
+        handlePopupSignup();
     };
+
     return (
         <div className = "left-container">
             <div className = "create-account-container">
