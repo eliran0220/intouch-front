@@ -5,7 +5,7 @@ const BgVideo = () => {
     return (
         <div className = "video-container">
             <video
-                src={bg_video}
+                src={bgVideo}
                 typeof="video/mp4"
                 loop
                 muted

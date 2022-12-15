@@ -3,12 +3,12 @@ export interface HttpApiRequest {
     method : METHOD,
     url : string,
     data :  Body | undefined,
-    headers : GenericRequestExtras | undefined,
+    headers : GenericInterface | undefined,
     query : string | undefined,
 }
 
-export type Body =  GenericRequestExtras | null;
+export type Body =  GenericInterface | null;
 
-interface GenericRequestExtras {
+export interface GenericInterface {
     [key : string] : any;
 }
