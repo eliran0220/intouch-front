@@ -11,9 +11,8 @@ const apiRequest = async (request : HttpApiRequest) =>{
             headers : request.headers? request.headers : {},
             query : request.query?  request.query : undefined,
         };
-        console.log(options);
         const response = await axios(options);
-        console.log(response.headers);
+        console.log(response)
         return response;
     }
     catch (error) {

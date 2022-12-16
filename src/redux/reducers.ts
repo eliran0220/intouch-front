@@ -1,14 +1,25 @@
-const reducer = (state, action) =>{
-    swtich(action.type) {
-        case "LOGIN":
-            return (
+import {initialState} from './utilitis';
+import {ProfileState,Action,ActionType} from '../models/redux-models';
+export const userReducer = (state: ProfileState = initialState, action: Action): ProfileState => {
+    switch(action.type) {
+        case ActionType.LOGIN:
+
+            return {
                 ...state,
-                  action.playload;
-            )
-            break;
+                email : action.payload,
+            }
+        case ActionType.LOGOUT:
+            return {
+                ...state,
+                email : action.payload,
+            }
+        case ActionType.SIGNUP:
+            return {
+                ...state,
+                email : action.payload
+            }   
         default:
             return state;    
     }
-}
-
-export const reducer;
+    return state;
+};

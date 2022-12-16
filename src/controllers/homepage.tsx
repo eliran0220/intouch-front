@@ -12,8 +12,25 @@ export const apiLoginRequest = async (email : string, password: string) =>{
             query: undefined
         }
         const response = await apiRequest(request);
-        console.log(response);
+        return response;
     } catch (error) {
         throw error;
+    }
+}
+
+export const apiSignupRequest = async (email: string, first_name: string, last_name: string, password: string) => {
+    try {
+        const body : Body = {email: email,first_name:first_name,last_name:last_name, password: password}
+        const request : HttpApiRequest = {
+            method: HTTP_METHODS.POST,
+            url: 'http://localhost:3030/v1/user/signup',
+            data: body,
+            headers: undefined,
+            query: undefined
+        }
+        const response = await apiRequest(request);
+        return response;
+    } catch (err){
+        throw err;
     }
 }
