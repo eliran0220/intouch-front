@@ -1,6 +1,7 @@
 import { HttpApiRequest, Body} from '../models/http-requests.models';
 import apiRequest from '../utilitis/http-request.utilities';
 import {HTTP_METHODS} from '../utilitis/constants.utilities';
+
 export const apiLoginRequest = async (email : string, password: string) =>{
     try {
         const body : Body = {email: email, password: password}
@@ -29,6 +30,23 @@ export const apiSignupRequest = async (email: string, first_name: string, last_n
             query: undefined
         }
         const response = await apiRequest(request);
+        return response;
+    } catch (err){
+        throw err;
+    }
+}
+
+export const apiLogoutRequest = async () => {
+    try {
+        const request : HttpApiRequest = {
+            method: HTTP_METHODS.GET,
+            url: 'http://localhost:3030/v1/user/logout',
+            data: null,
+            headers: undefined,
+            query: undefined
+        }
+        const response = await apiRequest(request);
+        localStorage.clear();
         return response;
     } catch (err){
         throw err;

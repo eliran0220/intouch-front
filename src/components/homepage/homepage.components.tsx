@@ -3,8 +3,20 @@ import Login from '../../components/homepage/login';
 import BgVideo from '../homepage/background-video';
 import CreateAccount from '../homepage/create-account';
 import Signup from '../homepage/signup';
-import React from "react";;
+import {isAuthenticated} from '../../utilitis/general-utilitis';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 const Homepage = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
+        (async () => {
+            const is_authenticated = await isAuthenticated();
+            console.log(is_authenticated)
+            if (is_authenticated) {
+                navigate('profile');
+            }
+        })();
+    }, []);
     return (
         <div className = "homepage-container">
             <Signup></Signup>

@@ -1,3 +1,4 @@
+import { createContext, useContext } from "react";
 var CONSTANTS = /** @class */ (function () {
     function CONSTANTS() {
     }
@@ -20,3 +21,15 @@ export var HTTP_METHODS;
     HTTP_METHODS["UPDATE"] = "update";
 })(HTTP_METHODS || (HTTP_METHODS = {}));
 export var BASE_URL = 'http://localhost:3030/v1/';
+export var initialUserState = {
+    first_name: '',
+    last_name: '',
+    created_at: '',
+    email: '',
+    password: ''
+};
+export var PostsDataContext = createContext({
+    posts: [],
+    setPosts: function () { return []; } // set a default value
+});
+export var usePostsDataContext = function () { return useContext(PostsDataContext); };

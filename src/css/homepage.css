@@ -7,6 +7,10 @@
     font-family: "Poppins",sans-serif;
 }
 
+html, body, #app, #app>div {
+    height: 100%
+  }
+
 .homepage-container{
     display: flex;
     flex-direction: row;
@@ -59,6 +63,7 @@
 
 .create-account-container h1{
     font-size: 22px;
+    color: #fff;
 
 }
 
@@ -116,6 +121,7 @@
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
+    color: #fff;
     border-bottom: 4px solid #ff416c;
 }
 
@@ -153,17 +159,25 @@
     pointer-events: none;
 }
 
-.active-popup-container {
-    position: absolute;
-    width: 20%;
-    left: 50%;
-    top: 50%;
+.showcase {
     opacity: 1;
     pointer-events: all;
     z-index: 1;
     transition: all ease-in 1s;
     transform: translate(-50%, -50%);
+}
 
+
+.active-popup-container {
+    position: absolute;
+    width: 20%;
+    left: 50%;
+    top: 40%;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 1;
+    transition: all ease-in 1s;
+    transform: translate(-50%, -50%);
 }
 
 .popup-container .form-container h1{
@@ -177,6 +191,25 @@
     text-transform: uppercase;
     color: #fff;
 }
+
+.creation-status-container {
+    margin-top:3rem;
+    position: relative;
+    width: 10%;
+    opacity: 0;
+    transition: all ease-in 1s;
+}
+.active-creation-status-container {
+    margin-top:2rem;
+    text-align: center;
+    font-weight: bold;
+    color:#ff416c;
+    opacity: 1;
+    transition: all ease-in 1s;
+    white-space: pre-line;
+
+}
+
 
 
 

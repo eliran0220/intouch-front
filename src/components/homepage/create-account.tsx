@@ -1,11 +1,10 @@
 import  '../../css/homepage.css';
-import {handlePopupSignup} from '../../utilitis/components/homepage';
-import React from "react";;
+import {toggleCreateAccount} from '../../utilitis/components/homepage';
 const CreateAccount = () => {
-    const popupSignup = () => {
-        handlePopupSignup();
-    };
+    const popupSignup = (event: any) => {
+        toggleCreateAccount(event);
 
+    };
     return (
         <div className = "left-container">
             <div className = "create-account-container">

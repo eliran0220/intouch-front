@@ -24,7 +24,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -49,11 +49,16 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../../css/homepage.css';
 import { useState } from 'react';
 import { apiLoginRequest } from '../../controllers/homepage';
+//import {login} from '../../redux/dispatchers';
+//import {State} from '../../redux/utilitis';
+import { useNavigate } from 'react-router-dom';
 var Login = function () {
     var _a = useState(""), email = _a[0], setEmail = _a[1];
     var _b = useState(""), password = _b[0], setPassword = _b[1];
+    //const dispatch = useDispatch();
+    var navigate = useNavigate();
     var handleLogin = function (event) { return __awaiter(void 0, void 0, void 0, function () {
-        var error_1;
+        var result, full_name, user_id, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -61,7 +66,23 @@ var Login = function () {
                     event.preventDefault();
                     return [4 /*yield*/, apiLoginRequest(email, password)];
                 case 1:
-                    _a.sent();
+                    result = _a.sent();
+                    if (result.data.status === 200) {
+                        console.log(result);
+                        full_name = result.data.data.full_name;
+                        user_id = result.data.data.user_id;
+                        console.log(typeof full_name);
+                        //dispatch<any>(login(email));
+                        console.log("Logged in!");
+                        console.log(result.data.data);
+                        localStorage.setItem('full_name', JSON.stringify(full_name));
+                        localStorage.setItem('user_id', JSON.stringify(user_id));
+                        localStorage.setItem('user_email', email);
+                        localStorage.setItem('is_logged_in', 'true');
+                        navigate('/profile');
+                    }
+                    else {
+                    }
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
@@ -70,6 +91,6 @@ var Login = function () {
             }
         });
     }); };
-    return (_jsx("div", __assign({ className: "right-container" }, { children: _jsx("div", __assign({ className: "login-container" }, { children: _jsxs("form", __assign({ className: "form-container" }, { children: [_jsx("h1", { children: "Login" }, void 0), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Username" }, void 0), _jsx("input", { type: "email", id: "Email", onChange: function (e) { return setEmail(e.target.value); } }, void 0)] }), void 0), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Password" }, void 0), _jsx("input", { type: "password", onChange: function (e) { return setPassword(e.target.value); } }, void 0)] }), void 0), _jsx("button", __assign({ className: "form-button", onClick: handleLogin }, { children: "Login" }), void 0)] }), void 0) }), void 0) }), void 0));
+    return (_jsx("div", __assign({ className: "right-container" }, { children: _jsx("div", __assign({ className: "login-container" }, { children: _jsxs("form", __assign({ className: "form-container" }, { children: [_jsx("h1", { children: "Login" }), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Username" }), _jsx("input", { type: "email", id: "Email", onChange: function (e) { return setEmail(e.target.value); } })] })), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Password" }), _jsx("input", { type: "password", onChange: function (e) { return setPassword(e.target.value); } })] })), _jsx("button", __assign({ className: "form-button", onClick: handleLogin }, { children: "Login" }))] })) })) })));
 };
 export default Login;

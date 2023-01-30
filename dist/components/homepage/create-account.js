@@ -11,14 +11,11 @@ var __assign = (this && this.__assign) || function () {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../../css/homepage.css';
-;
+import { handlePopupSignup } from '../../utilitis/components/homepage';
 var CreateAccount = function () {
     var popupSignup = function () {
-        var homepage_container = document.getElementsByClassName("homepage-container")[0];
-        var popup_container = document.getElementsByClassName("popup-container")[0];
-        homepage_container.classList.add("blured");
-        popup_container.classList.add("active");
+        handlePopupSignup();
     };
-    return (_jsx("div", __assign({ className: "left-container" }, { children: _jsxs("div", __assign({ className: "create-account-container" }, { children: [_jsx("h1", { children: "Don't have an account yet?" }, void 0), _jsx("p", { children: "Join many others and start connecting" }, void 0), _jsx("button", __assign({ onClick: popupSignup }, { children: "Create an account" }), void 0)] }), void 0) }), void 0));
+    return (_jsx("div", __assign({ className: "left-container" }, { children: _jsxs("div", __assign({ className: "create-account-container" }, { children: [_jsx("h1", { children: "Don't have an account yet?" }), _jsx("p", { children: "Join many others and start connecting" }), _jsx("button", __assign({ onClick: popupSignup }, { children: "Create an account" }))] })) })));
 };
 export default CreateAccount;

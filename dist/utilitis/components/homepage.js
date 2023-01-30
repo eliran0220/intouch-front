@@ -13,7 +13,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -34,9 +34,52 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-;
-export var loginRequest = function () { return __awaiter(void 0, void 0, void 0, function () {
+export var handlePopupSignup = function () {
+    var popup_container = document.getElementsByClassName("popup-container")[0];
+    var left_container = document.getElementsByClassName("left-container")[0];
+    var right_container = document.getElementsByClassName("right-container")[0];
+    var bg_vid = document.getElementsByClassName("video-container")[0];
+    popup_container.className = "active-popup-container";
+    left_container.classList.add("blured");
+    right_container.classList.add("blured");
+    bg_vid.classList.add("blured");
+};
+export var handleExitSignup = function () {
+    var popup_container = document.getElementsByClassName("active-popup-container")[0];
+    var left_container = document.getElementsByClassName("left-container blured")[0];
+    var right_container = document.getElementsByClassName("right-container blured")[0];
+    var bg_vid = document.getElementsByClassName("video-container blured")[0];
+    var active_creation_status_container = document.getElementsByClassName("active-creation-status-container")[0];
+    popup_container.className = "popup-container";
+    left_container.classList.remove("blured");
+    right_container.classList.remove("blured");
+    bg_vid.classList.remove("blured");
+    active_creation_status_container.className = "creation-status-container";
+};
+export var handleSignupMessage = function () {
+    var popup_container = document.getElementsByClassName("creation-status-container ")[0];
+    popup_container.className = "active-creation-status-container";
+};
+export var closeSignupMessage = function () {
+    var active_creation_status_container = document.getElementsByClassName("active-creation-status-container")[0];
+    if (active_creation_status_container) {
+        active_creation_status_container.className = "creation-status-container";
+    }
+};
+export var parseErrosSignup = function (data) {
+    console.log(data);
+    var errors = '';
+    Object.entries(data).forEach(function (_a) {
+        var key = _a[0], value = _a[1];
+        errors += "".concat(value, "\n");
+    });
+    console.log(errors);
+    return errors;
+};
+export var delay = function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
+        setTimeout(function () {
+        }, 3000);
         return [2 /*return*/];
     });
 }); };

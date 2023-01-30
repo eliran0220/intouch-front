@@ -10,9 +10,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import bg_video from '../../assets/homepage/bg_video.mp4';
+import bgVideo from '../../assets/homepage/background_vid.mp4';
 import '../../css/homepage.css';
 var BgVideo = function () {
-    return (_jsx("div", __assign({ className: "video-container" }, { children: _jsx("video", { src: bg_video, typeof: "video/mp4", loop: true, muted: true, autoPlay: true, className: "video" }, void 0) }), void 0));
+    return (_jsx("div", __assign({ className: "video-container" }, { children: _jsx("video", { src: bgVideo, typeof: "video/mp4", loop: true, muted: true, autoPlay: true, className: "video" }) })));
 };
 export default BgVideo;

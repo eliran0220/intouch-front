@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.post{
+    width: 40%;
+    display: block;
+    height: fit-content;
+    background: #FFF;
+    padding: 10px 15px;
+    border-radius:7px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    margin-top: 2%;
+}
+
+.post .post-top{
+    display: flex;
+    align-items: center
+
+}
+
+.post .post-top span {
+    width: 100%;
+    padding: 10px;
+    margin-left: 1%;
+    border: 0;
+    outline: none;
+    background: #efefef;
+    border-radius: 30px;
+    font-size: 17px;
+    color: gray;
+}
+
+.post .post-top span:hover{
+    background: #E3E3E3;
+    cursor: pointer;
+}
+
+.textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    font-weight: normal;
+  }
+
+
+.post-buttom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 5% 0 0 2%;
+  }
+
+.post-icons{
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.post-icons li {
+    list-style: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1DA1F2;
+    transition: background 0.2 ease;
+}
+
+.post-icons li:hover{
+    background: #E7F5FE;
+}
+
+.share-button {
+    cursor: pointer;
+    padding: 8px 8px 8px 8px;
+    background-color: #1DA1F2;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+}

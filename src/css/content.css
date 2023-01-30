@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+    padding: 10px 15px;
+    margin: 2% 0 2% 0;
+    transition: height 0.25s linear;
+}
+
+.feed-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+    background: #FFF;
+    border-radius:24px;
+    overflow: visible;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.feed-post-top {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.feed-post-middle {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+
+.feed-post-buttom {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5px 5px 5px;
+    height: fit-content;
+}
+
+.post-profile-pic {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 5px 5px;
+    width: fit-content;
+    height:fit-content;
+    cursor: pointer;
+}
+
+.post-profile-pic:hover{
+    opacity: 0.8;
+}
+
+.post-content {
+    margin: 5px 0 5px 0;
+}
+
+.feed-post-buttom-item{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed-post-icon {
+    color: #ACADA8;
+    font-size: 22px;
+}
+
+.feed-post-buttom-item:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 16px;
+    padding-top: 2px;
+    font-weight: 600;
+    color: black;
+
+}
+
+h2 {
+    font-size: 16px;
+    padding-top: 2px;
+    font-weight: 600;
+    color: #ACADA8;
+}
+
+small {
+    font-size: 13px;
+    font-weight: 500;
+    color: #BBBCB6;
+}
+
+p {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-all;
+    white-space: pre-wrap;
+}

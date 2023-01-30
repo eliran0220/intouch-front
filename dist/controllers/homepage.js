@@ -13,7 +13,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -53,11 +53,60 @@ export var apiLoginRequest = function (email, password) { return __awaiter(void 
                 return [4 /*yield*/, apiRequest(request)];
             case 1:
                 response = _a.sent();
-                console.log(response);
-                return [3 /*break*/, 3];
+                return [2 /*return*/, response];
             case 2:
                 error_1 = _a.sent();
                 throw error_1;
+            case 3: return [2 /*return*/];
+        }
+    });
+}); };
+export var apiSignupRequest = function (email, first_name, last_name, password) { return __awaiter(void 0, void 0, void 0, function () {
+    var body, request, response, err_1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                body = { email: email, first_name: first_name, last_name: last_name, password: password };
+                request = {
+                    method: HTTP_METHODS.POST,
+                    url: 'http://localhost:3030/v1/user/signup',
+                    data: body,
+                    headers: undefined,
+                    query: undefined
+                };
+                return [4 /*yield*/, apiRequest(request)];
+            case 1:
+                response = _a.sent();
+                return [2 /*return*/, response];
+            case 2:
+                err_1 = _a.sent();
+                throw err_1;
+            case 3: return [2 /*return*/];
+        }
+    });
+}); };
+export var apiLogoutRequest = function () { return __awaiter(void 0, void 0, void 0, function () {
+    var request, response, err_2;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                request = {
+                    method: HTTP_METHODS.GET,
+                    url: 'http://localhost:3030/v1/user/logout',
+                    data: null,
+                    headers: undefined,
+                    query: undefined
+                };
+                return [4 /*yield*/, apiRequest(request)];
+            case 1:
+                response = _a.sent();
+                localStorage.clear;
+                return [2 /*return*/, response];
+            case 2:
+                err_2 = _a.sent();
+                throw err_2;
             case 3: return [2 /*return*/];
         }
     });

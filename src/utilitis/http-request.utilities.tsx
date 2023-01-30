@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {HttpApiRequest} from '../models/http-requests.models';
-import {HTTP_METHODS} from '../utilitis/constants.utilities';
-
+axios.defaults.withCredentials = true;
 const apiRequest = async (request : HttpApiRequest) =>{
     try{
         const options = {
@@ -12,7 +11,6 @@ const apiRequest = async (request : HttpApiRequest) =>{
             query : request.query?  request.query : undefined,
         };
         const response = await axios(options);
-        console.log(response)
         return response;
     }
     catch (error) {
@@ -20,5 +18,6 @@ const apiRequest = async (request : HttpApiRequest) =>{
         throw error;
     }
 }
+
 
 export default apiRequest;

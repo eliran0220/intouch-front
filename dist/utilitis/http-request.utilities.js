@@ -13,7 +13,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -35,6 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 var apiRequest = function (request) { return __awaiter(void 0, void 0, void 0, function () {
     var options, response, error_1;
     return __generator(this, function (_a) {
@@ -48,11 +49,9 @@ var apiRequest = function (request) { return __awaiter(void 0, void 0, void 0, f
                     headers: request.headers ? request.headers : {},
                     query: request.query ? request.query : undefined,
                 };
-                console.log(options);
                 return [4 /*yield*/, axios(options)];
             case 1:
                 response = _a.sent();
-                console.log(response.headers);
                 return [2 /*return*/, response];
             case 2:
                 error_1 = _a.sent();

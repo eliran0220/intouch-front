@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #FAF9F6;
+}
+
+.profile-container {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: inline-flex;
+  vertical-align: top;
+  width: 100%;
+  margin: 2% 0 0 27%;
+  width: auto;
+}

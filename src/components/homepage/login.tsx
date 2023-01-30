@@ -1,22 +1,33 @@
 import  '../../css/homepage.css';
 import { useState } from 'react';
 import {apiLoginRequest} from '../../controllers/homepage';
-import {useDispatch, useSelector} from 'react-redux';
-import {login} from '../../redux/dispatchers';
-import {State} from '../../redux/utilitis';
+import {useDispatch} from 'react-redux';
+//import {login} from '../../redux/dispatchers';
+//import {State} from '../../redux/utilitis';
+import { useNavigate } from 'react-router-dom';
+import { AxiosResponse } from '../../models/http-requests.models';
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const dispatch = useDispatch();
-    const selector = useSelector((state: State) => state.user.email);
+    //const dispatch = useDispatch();
+    const navigate = useNavigate()
     const handleLogin = async (event : any) =>{
         try {
             event.preventDefault();
-            console.log("going in")
-            const result = await apiLoginRequest(email, password);
-            console.log(result)
-            dispatch<any>(login(email));
-            console.log(selector)
+            const result = await apiLoginRequest(email, password) as AxiosResponse;
+            if(result.data.status === 200) {
+                console.log(result);
+                const full_name = result.data.data.full_name;
+                const user_id = result.data.data.user_id;
+                //dispatch<any>(login(email));
+                localStorage.setItem('full_name',JSON.stringify(full_name));
+                localStorage.setItem('user_id',JSON.stringify(user_id));
+                localStorage.setItem('user_email',email);
+                localStorage.setItem('is_logged_in','true');
+                navigate('/profile')
+            } else {
+                console.log("error!")
+            }
         } catch (error) {
             throw error;
         }

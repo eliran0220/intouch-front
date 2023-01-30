@@ -24,7 +24,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -47,17 +47,48 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import '../../css/homepage.css';
+import { handleExitSignup, handleSignupMessage, parseErrosSignup } from '../../utilitis//components/homepage';
+import { apiSignupRequest } from '../../controllers/homepage';
+//import {signup} from '../../redux/dispatchers';
 import { useState } from "react";
-;
+import { useNavigate } from "react-router-dom";
 var Signup = function () {
     var _a = useState(""), email = _a[0], setEmail = _a[1];
-    var _b = useState(""), password = _b[0], setPassword = _b[1];
+    var _b = useState(""), first_name = _b[0], setFirstname = _b[1];
+    var _c = useState(""), last_name = _c[0], setLastname = _c[1];
+    var _d = useState(""), password = _d[0], setPassword = _d[1];
+    var _e = useState(""), response_message = _e[0], setResponseMessage = _e[1];
+    //const dispatch = useDispatch();
+    var navigate = useNavigate();
     var handleSignup = function (event) { return __awaiter(void 0, void 0, void 0, function () {
+        var result, err_1, axios_err;
         return __generator(this, function (_a) {
-            event.preventDefault();
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 2, , 3]);
+                    event.preventDefault();
+                    return [4 /*yield*/, apiSignupRequest(email, first_name, last_name, password)];
+                case 1:
+                    result = _a.sent();
+                    //dispatch<any>(signup(email));
+                    setResponseMessage(result.data.message);
+                    handleSignupMessage();
+                    return [3 /*break*/, 3];
+                case 2:
+                    err_1 = _a.sent();
+                    axios_err = err_1;
+                    setResponseMessage(parseErrosSignup(axios_err.response.data.message));
+                    handleSignupMessage();
+                    throw err_1;
+                case 3: return [2 /*return*/];
+            }
         });
     }); };
-    return (_jsx("div", __assign({ className: "popup-container" }, { children: _jsxs("form", __assign({ className: "form-container" }, { children: [_jsx("h1", { children: "Create an account" }, void 0), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Username" }, void 0), _jsx("input", { type: "email", id: "Email", onChange: function (e) { return setEmail(e.target.value); } }, void 0)] }), void 0), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Password" }, void 0), _jsx("input", { type: "password", onChange: function (e) { return setPassword(e.target.value); } }, void 0)] }), void 0), _jsx("button", __assign({ className: "form-button", onClick: handleSignup }, { children: "Signup" }), void 0)] }), void 0) }), void 0));
+    var handleExit = function (event) {
+        event.preventDefault();
+        setResponseMessage("");
+        handleExitSignup();
+    };
+    return (_jsxs("div", __assign({ className: "popup-container" }, { children: [_jsxs("form", __assign({ className: "form-container" }, { children: [_jsx("h1", { children: "Create an account" }), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Email" }), _jsx("input", { type: "email", id: "Email", onChange: function (e) { return setEmail(e.target.value); } })] })), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "First name" }), _jsx("input", { type: "text", id: "FirstName", onChange: function (e) { return setFirstname(e.target.value); } })] })), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Last name" }), _jsx("input", { type: "text", id: "LastName", onChange: function (e) { return setLastname(e.target.value); } })] })), _jsxs("div", __assign({ className: "login-input" }, { children: [_jsx("span", { children: "Password" }), _jsx("input", { type: "password", onChange: function (e) { return setPassword(e.target.value); } })] })), _jsxs("div", { children: [_jsx("button", __assign({ className: "form-button", onClick: handleSignup }, { children: "Signup" })), _jsx("button", __assign({ className: "form-button", onClick: handleExit }, { children: "Exist" }))] })] })), _jsx("div", __assign({ className: "creation-status-container" }, { children: _jsx("p", { children: response_message }) }))] })));
 };
 export default Signup;
